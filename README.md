@@ -20,3 +20,4 @@ pythom manage.py test
 * pip install django
 
 ## PR
+https://github.com/abeershboul/-django-models
