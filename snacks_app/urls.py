@@ -1,10 +1,9 @@
-from django.urls import path,include
-from .views import HomePage ,About,Snacks
-
+from django.urls import path
+from .views import SnackListView,SnackDetail,HomePage,AboutPage
 urlpatterns = [
-    path('home',HomePage.as_view(),name='home'),
-    path('about',About.as_view(),name='about'),
-    path('',Snacks.as_view(),name='snacks')
+    path('',SnackListView.as_view(),name='snacks'),
+    path('<int:pk>',SnackDetail.as_view(),name='detail'),
+    path('home', HomePage.as_view(),name='home'),
+    path('about/', AboutPage.as_view(),name='about')
+]  
     
-    
-]

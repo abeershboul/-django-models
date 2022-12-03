@@ -1,13 +1,32 @@
 {% extends 'base.html' %}
 
+{% block content %}
 
-{% block content%}
-<h1 style="color: red"> Snacks_list</h1>
-{% for i in object_list %}
-<table>
-            <h1>{{i.name}}</h1> 
-            <h3> {{i.purchaser}} </h3>
-            <p>{{i.description}}</p>
-            {% endfor %}
-</table>
-{% endblock content  %}
+<h2>Snacks List: </h2>
+
+{% for snack in object_list %}
+<div class="container">
+  <div class="card">
+      <h2>{{snack.name}}</h2>
+
+      <div class="data">
+        <img src={{snack.img_url}} alt="Ice cream Image" class="image">
+      
+          
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+          
+          <div>
+            <a href="{% url 'detail' snack.id%}" class="button" target="_blank">View detail</a>
+          </div>
+      </div>
+  </div>
+</div>
+       
+      
+    
+{% endfor%}
+{% endblock content %}
