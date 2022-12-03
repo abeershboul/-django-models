@@ -8,21 +8,81 @@
 </head>
 <body> 
     <style>
-    body {
-        background-color: #9896f1;
+         body {
+            background-color: #efeff5;
+        }
 
-         }
-    h1{
-            color :brown;
+        h1{
+            color:#edb1f1;
             text-align: center;
-        }    
+        }
+       
+      a{
+            color : #e61c1c;
+            display: flex;
+            justify-content: space-between;
+            width: 100px;
+            
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            background :#e0ebeb;
+          }
+
+          .title {
+            color: grey;
+            font-size: 18px;
+          }
+          
+          button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+          }
+          
+          
+          
+          button:hover, a:hover {
+            opacity: 0.7;
+          }
+          
+          
+          .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+          }
+          
+          
+          .container {
+            padding: 2px 16px;
+          }
+          .card {
+           
+            border-radius: 5px; /* 5px rounded corners */
+          }
+          
+          
+          img {
+            border-radius: 5px 5px 0 0;
+          }
+        </style>
 
 
     </style>
      <header>
         <nav>
             <a href="{% url 'home' %}" >Home </a>
-            <a href="{%   url 'about'%}"> About</a>
+            <a href="{% url 'about'%}"> About</a>
   
         </nav>
     </header>
